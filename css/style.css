@@ -1,0 +1,584 @@
+/* 
+********************************************
+RESET CSS to Get Rid of Browser Defaults
+********************************************
+ */
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+
+  IE8 (and lower) requires a shiv:
+  http://ejohn.org/blog/html5-shiv
+*/
+  display: block;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+/*
+  For IE6 + IE7:
+
+  "display: list-item" keeps bullets from
+  disappearing if hasLayout is triggered.
+*/
+  display: list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg {
+/*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+*/
+  overflow: hidden;
+}
+ 
+ /* 
+********************************************
+CSS for Fonts to Get Rid of Browser Defaults
+********************************************
+ */
+ 
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xF1YPouZEKgzpqZW9wN-3Ek.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xONSK5BxN3NFS4EJkViHIqo.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Cond Light Italic'), local('OpenSans-CondensedLightItalic'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/jIXlqT1WKafUSwj6s9AzV6XnXbwdDC8wAz6IIzmCDUP3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+ 
+/* 
+********************************************
+Style Css for HTML Page
+********************************************
+*/
+
+
+/* 
+***************
+Miscellaneous
+***************
+ */
+
+body {
+  background-color: white;
+  color: #666666;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #FF0000;
+}
+a:visited {
+  color: #FF5C5C;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  
+}
+ 
+#contentWrapper {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.inactivelink {
+	cursor: default;
+}
+
+.footer{
+	position: fixed;
+	width: 60%;
+	bottom:0;
+	left: 250px;
+	margin-left: 1rem;
+}
+/* 
+*******************
+Left Navigation CSS
+*******************
+ */
+ #logo {
+  display: block;
+  position: center;
+  margin-left: auto; margin-right:auto;
+  width: 75%;
+ /*  border: 4px solid rgba(110, 189,203, 0.4);
+  border-radius: 20px; */
+ }
+.contentLeft {
+  z-index: 500;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+/*   top: 0;
+  left: 0;
+  float: left; */
+  background-color: rgba(100,100,100, 0);
+  box-shadow: 0px 0px 20px #404040;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+}
+
+.leftNavigation {
+  margin: 0rem 0;
+}
+
+.leftNavigation, .leftNavigation li ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leftNavigation li a {
+  font-size: 0.9rem;
+  display: block;
+  padding: 1.2rem 0.5rem 1.2rem 3rem;
+  margin: 0 1.5rem;
+  color: #aebdc0;
+/*  border-bottom: solid 1px #395673;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.leftNavigation li a, .leftNavigation li a .leftNavIcon {
+  line-height: 120%;
+}
+.leftNavigation li a .leftNavIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+.leftNavigation li a:hover {
+  color: #404040;
+}
+.leftNavigation li ul {
+  display: none;
+  margin: 0;
+  background-color: #a3ebf9;
+  
+}
+
+.leftNavigation li ul li a {
+  border-bottom: solid 1px white;
+} 
+.leftNavigation li ul li:last-child a {
+  border-bottom: none;
+}
+.leftNavigation li ul li.active a {
+  color: white;
+}
+.leftNavigation li.active > a {
+  color: white;
+}
+.leftNavigation li.active ul {
+  display: block;
+}
+.leftNavigation > li.active {
+  background-color: #427c97;
+}
+ 
+ /* 
+********************
+General Right Content CSS
+********************
+ */
+ 
+.contentRight {
+	margin-left: 250px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
+	
+}
+
+.background img {
+	/* width: 100%; */
+	position: fixed;
+	z-index: -1;
+	
+	min-height:100%;
+	min-width: calc(100% - 250px);
+	
+	height: 100%;
+}
+
+
+.information {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; 
+	background: rgba(0,0,0, 0.75);/*rgba(161,237,233, 0.3);*/
+	color: #FFFFFF;
+	margin: 0rem 2rem 0rem 0;
+	padding: 12rem 1.6rem 6rem 1.6rem;
+	width: 60%; 
+	min-height: 100%;
+}
+
+
+.information h1 {
+	padding-bottom: 0.8rem ;
+	margin-bottom: 0.8rem;
+	border-bottom: 1px solid white;	
+	font-size: 1.6rem;
+}
+.information h2 {
+	font-size: 1.3rem;
+	margin-bottom: 0.9rem;
+}
+.information h3 {
+	font-size: 1.1rem;
+	font-style: italic;
+	margin-bottom: 0.6rem;
+}
+
+.information p{
+	margin-bottom: 0.6rem;
+	line-height: 1.6rem;
+	font-size: 1.1rem;
+	font-weight: normal;
+}
+
+.information :last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+	
+}	
+.information ul {
+	list-style-type: disc;
+	line-height: 1.45rem;
+	font-size: 1rem;
+	
+	padding-right:1.5rem;
+	font: white;
+}
+.information ul > li {
+	margin-left: 3rem;
+	
+}
+.information > div {
+	padding-bottom: 1rem;
+	border-bottom: 1px dotted white;
+	margin-bottom: 1rem;
+}
+
+.information > div p {
+	margin-bottom: 0;
+}
+
+/* 
+***********************
+HOME Page
+***********************
+ */
+#home img{
+	margin: 0.9rem 0;
+	width: 100%;
+} 
+
+ .upcoming > .event {
+	margin-bottom: 1.2rem;
+ }
+ .upcoming img {
+	margin: 0.9rem 0;
+	width: 100%;
+ }
+
+/* 
+***********************
+Eboard Page CSS
+***********************
+ */
+ .execboard {
+	position: relative;
+	border-bottom: none;
+ }
+ 
+ .execboard img {
+	width: 40%;
+
+ }
+ .facts {
+	position: absolute;
+	margin: 0 1rem 0 40%;
+	top: 30%;
+ }
+
+ /* 
+***********************
+Annual Events Page CSS
+***********************
+ */
+ 
+ 
+ .events img {
+	width: 90%;
+	display: block;
+	margin: 0 auto 0.6rem;
+ }
+ 
+ .events {
+	/* margin-bottom: 1.75rem; */
+ }
+ 
+ /* 
+***********************
+Abroad Exerpeinces Page CSS
+***********************
+ */
+ 
+ .stories img {
+	width: 40%;
+	display:block;
+	float: left;
+	margin: 0 1rem 0 0;
+ }
+ 
+ .stories {
+	clear:both;
+ }
+ 
+  /* 
+***********************
+Abroad Exerpeinces Page CSS
+***********************
+ */
+ 
+ .locations img {
+	width: 100%;
+	display: block;
+	margin: 0 auto 0.6rem;
+ }
+ 
+ /* 
+***********************
+Weekly Meetings Page CSS
+***********************
+ */
+
+ #weeklyMeetings img{
+	margin: 0.9rem 0;
+	width: 100%;
+} 
+ 
+
+
+ 
